@@ -1,0 +1,300 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.error{
+
+    color: red;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+
+/* Action buttons */
+.actionButtons {
+  display: flex;
+  width: 80%;
+ 
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.add-btn
+{
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-btn:hover
+ {
+  filter: brightness(0.95);
+}
+
+
+/* Export dropdown */
+.export-dropdown-wrapper {
+  position: relative;
+}
+
+.export-btn {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.export-btn:hover {
+  filter: brightness(0.95);
+}
+
+.export-dropdown {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 140px;
+  z-index: 1000;
+}
+
+.export-dropdown li {
+  padding: 8px 10px;
+  cursor: pointer;
+  color: black;
+}
+
+.export-dropdown li:hover {
+  background-color: #eee;
+}
+
+/* Section */
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+ .main-content{
+    flex: 1;
+  padding: 18px 24px;
+  box-sizing: border-box;
+  min-width: 0;
+  width: 100%;
+  padding-top: 0;
+}
+
+
+
+
+/* Add Form */
+
+
+
+
+.form-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+.form.product-form {
+  width: 92%;
+  max-width: 420px;
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* Inputs/selects/textarea  */
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="email"],
+.form input[type="password"],
+.form select,
+.form textarea ,select {
+  background-color: #e6f7ff;
+  color: #0b2030;          
+  border: 1px solid #c7e7fb;
+  padding: 10px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  width: 100%;
+ margin-bottom: .5rem;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+/* Placeholder color */
+.form input::placeholder,
+.form textarea::placeholder {
+  color: rgba(11, 32, 48, 0.45);
+}
+
+/* Focus state */
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: #7fc9ff;
+  box-shadow: 0 0 0 6px rgba(127, 201, 255, 0.12);
+}
+
+/* Buttons  */
+.form-btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cancel-btn {
+  background-color: white;
+  color: #f44336;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.submit-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+
+
+/* Table style  */
+/* ✅ Table container always allows full width + scroll */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+/* ✅ Table fills container but never cuts columns */
+table {
+  width: 100%;
+  min-width: 900px; /* keeps all columns visible */
+  border-collapse: collapse;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #e6e9ef;
+}
+
+/* Header */
+thead {
+  background-color: #f7f9fc;
+}
+
+thead th {
+  text-align: left;
+  padding: 12px 14px;
+  font-weight: 600;
+  color: #1f2937;
+  border-bottom: 2px solid #e0e6ef;
+  white-space: nowrap; /* keeps header text on one line */
+}
+
+/* Body cells */
+tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e9edf3;
+  color: #333;
+  text-align: left;
+  white-space: nowrap; /* ✅ prevents columns from collapsing */
+}
+
+/* Alternating row colors */
+tbody tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+/* Hover highlight */
+tbody tr:hover {
+  background-color: #f0f6ff;
+  transition: background-color 0.2s ease;
+}
+
+/* Action buttons */
+.btn-edit,
+.btn-delete {
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.btn-edit {
+  color: #007bff;
+}
+
+.btn-edit:hover {
+  color: #0056b3;
+}
+
+.btn-delete {
+  color: #e74c3c;
+}
+
+.btn-delete:hover {
+  color: #c0392b;
+}
+
+/* Scrollbar */
+.table-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+
+@media (max-width: 450px) {
+  
+.form-wrapper{
+ position: absolute;
+
+   
+}
+.form{
+ width: 90%;
+
+}
+  
+}
+
+@media (min-width: 901px) {
+ 
+}
