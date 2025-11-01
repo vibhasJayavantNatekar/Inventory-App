@@ -14,27 +14,10 @@ const login = ({ onlogin }) => {
 
   const navigate = useNavigate();
 
-  const ourdata = {
-    User: "Vibhas",
-    Pass: "123456",
-    Actuve: true
-  }
 
 
 
-  function handleChange(e) {
 
-
-    if (e.target.name == 'username') {
-      setUsername(e.target.value)
-
-
-    } else {
-      setPassword(e.target.value)
-    }
-
-
-  }
 async function validate() {
   const temp = {};
 
@@ -77,7 +60,7 @@ async function validate() {
     const result = await validate();
   seterrors(result);
 
-  // ✅ If we got a user object
+ 
   if (result.user) {
     const userData = result.user;
 
