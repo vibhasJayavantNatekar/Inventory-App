@@ -16,7 +16,7 @@ npm install
 
 ### Frontend
 ```bash
-cd frontend
+cd Frontend
 npm install
 ```
 
@@ -24,7 +24,7 @@ npm install
 Create a `.env` file inside the **backend** folder and add the following variables:
 
 ```
-MONGO_URI=your_mongodb_connection_string
+
 PORT=5000
 ```
 
@@ -36,7 +36,7 @@ npm start
 
 ## 5. Start the Frontend
 ```bash
-cd frontend
+cd Frontend
 npm run dev
 ```
 
